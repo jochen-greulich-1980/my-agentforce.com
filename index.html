@@ -101,11 +101,15 @@
           scrt2URL: 'https://kiauvocdp--agentforce.sandbox.my.salesforce-scrt.com'
         }
       );
-      embeddedservice_bootstrap.addEventHandler('onEmbeddedMessagingReady', () => {
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-          currentUrl: window.location.href
-        });
+      
+      // WebV2: window-Event statt addEventHandler
+      window.addEventListener('onEmbeddedMessagingReady', () => {
+         console.log('Ready – setting hidden fields');
+         embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+           currentUrl: window.location.href
+         });
       });
+
     } catch (err) {
       console.error('Error loading Embedded Messaging: ', err);
     }
