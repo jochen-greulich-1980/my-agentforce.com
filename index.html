@@ -101,6 +101,13 @@
           scrt2URL: 'https://kiauvocdp--agentforce.sandbox.my.salesforce-scrt.com'
         }
       );
+
+      window.addEventListener("onEmbeddedMessagingReady", () => {
+				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+					"appCountry": "de"
+				});
+			});
+      
     } catch (err) {
       console.error('Error loading Embedded Messaging: ', err);
     }
