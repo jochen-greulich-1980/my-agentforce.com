@@ -138,7 +138,7 @@
 </div>
 
 <div id="widgetGate">
-  <h3>Chat-Widget freischalten</h3>
+  <h3>Enable Chat Widget</h3>
   <input type="password" id="pwInput" placeholder="Enter password to load chat widget" autocomplete="off" />
   <button onclick="checkPassword()">OK</button>
   <div class="error" id="pwError"></div>
@@ -162,7 +162,7 @@
       document.getElementById("widgetGate").style.display = "none";
       loadWidgetScript();
     } else {
-      document.getElementById("pwError").textContent = "Falsches Passwort.";
+      document.getElementById("pwError").textContent = "Wrong password.";
     }
   }
 
