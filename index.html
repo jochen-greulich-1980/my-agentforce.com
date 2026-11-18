@@ -189,7 +189,7 @@
     try { 	  
       const urlParams = new URLSearchParams(window.location.search);
       const countryParam = urlParams.get('country') || 'de';
-      const languageParam = urlParams.get('language') || 'de';
+      const languageParam = urlParams.get('language') || 'en_US';
 		
       embeddedservice_bootstrap.settings.language = languageParam;
       embeddedservice_bootstrap.init(
